@@ -1,5 +1,6 @@
 import json
 
+
 class Items:
     def __init__(self):
         try:
@@ -16,7 +17,7 @@ class Items:
 
     def create(self, data):
         self.items.append(data)
-      
+
     def save_all(self):
         with open("items.json", "w") as f:
             json.dump(self.items, f)
@@ -33,5 +34,6 @@ class Items:
             self.save_all()
             return True
         return False
+
 
 items = Items()
